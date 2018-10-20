@@ -1,14 +1,28 @@
 package mobilne.mobilneproject;
 
-public class Item {
-    public String name;
-    public String description;
-    public Double weight;
+import java.util.ArrayList;
 
-    public Item(String name, String description, Double weight){
+public class Item {
+    private int type;
+    private String name;
+    private String desc;
+    private ArrayList<String> attributes;
+    private ArrayList<String> parametres;
+
+    public Item(int type, String name, String desc, ArrayList<String> attributes, ArrayList<String> parametres) {
+        this.type = type;
         this.name = name;
-        this.description = description;
-        this.weight = weight;
+        this.desc = desc;
+        this.attributes = attributes;
+        this.parametres = parametres;
+    }
+
+    public int getType() {
+        return type;
+    }
+
+    public void setType(int type) {
+        this.type = type;
     }
 
     public String getName() {
@@ -19,19 +33,27 @@ public class Item {
         this.name = name;
     }
 
-    public String getDescription() {
-        return description;
+    public String getDesc() {
+        return desc;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setDesc(String desc) {
+        this.desc = desc;
     }
 
-    public Double getWeight() {
-        return weight;
+    public ArrayList<String> getAttributes() {
+        return attributes;
     }
 
-    public void setWeight(Double weight) {
-        this.weight = weight;
+    public void setAttributes(ArrayList<String> attributes) {
+        this.attributes = attributes;
+    }
+
+    public ArrayList<String> getParametres() {
+        return parametres;
+    }
+
+    public void setParametres(ArrayList<String> parametres) {
+        this.parametres = parametres;
     }
 }

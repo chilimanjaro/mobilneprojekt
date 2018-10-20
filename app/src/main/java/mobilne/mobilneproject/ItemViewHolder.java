@@ -7,15 +7,18 @@ import android.widget.TextView;
 
 public class ItemViewHolder extends RecyclerView.ViewHolder {
 
-    private TextView textView;
+    private TextView itemTitle;
+    private TextView itemDesc;
 
     public ItemViewHolder(@NonNull View itemView) {
         super(itemView);
-        this.textView = itemView.findViewById(R.id.view_holder_text_view);
+        this.itemTitle = itemView.findViewById(R.id.view_holder_item_title);
+        this.itemDesc = itemView.findViewById(R.id.view_holder_item_desc);
     }
 
-    public void configure(int position, View.OnClickListener clickListener) {
-        this.textView.setText("Element na pozycji" + position);
+    public void configure(int position, View.OnClickListener clickListener, String name, String desc) {
+        this.itemTitle.setText(name);
+        this.itemDesc.setText(desc);
 
         this.itemView.setOnClickListener(clickListener);
     }
