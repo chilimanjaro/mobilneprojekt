@@ -1,0 +1,121 @@
+[
+	{
+		"type": 0,
+		"name": "ATLAS PLUS - nowy",
+		"desc": "klej wysokoelastyczny odkształcalny 2-10 mm, C2TE S1, PODWÓJNA MOC WŁÓKIEN I POLIMERÓW",
+		"attributes": [
+			"doskonale parametry robocze i aplikacyjne",
+			"bardzo wysoka przyczepność",
+			"brak spływu dla okładzin wielkoformatowych",
+			"bez efektu wciągania"
+		],
+		"parametres": [
+			"grubość stosowanej warstwy: 2 - 10 mm",
+			"temperatura stosowania: od +1 °C do +25 °C",
+			"czas gotowości do pracy: ok. 4 godziny",
+			"spoinowanie: po 16 / 24 godzinach",
+			"zużycie dla płytek 30 x 30 cm: od 2,0 kg/m2"
+		]
+	},
+	{
+		"type": 0,
+		"name": "OK! KLEJ UELASTYCZNIONY",
+		"desc": "podwójna moc włókien",
+		"attributes": [
+			"pozwala uzyskać efekt zbrojenia rozproszonego",
+			"większa odporność na skoki temperatur w czasie użytkowania",
+			"bez efektu zapadania się płytek",
+			"brak spływu podczas układanie płytek „od góry” ściany"
+		],
+		"parametres": [
+			"grubość stosowanej warstwy: 2 - 10 mm",
+			"temperatura stosowania: od +5 °C do +30 °C",
+			"czas gotowości do pracy: ok. 4 godziny",
+			"spoinowanie: po 12/24 godzinach",
+			"zużycie dla płytek 30 x 30 cm: od 2,2 kg/m2"
+		]
+	},
+	{
+		"type": 0,
+		"name": "ATLAS ULTRA GEOFLEX",
+		"desc": "klej żelowy, wysokoelastyczny, odkształcalny (2-15 mm), typ C2TE S1",
+		"attributes": [
+			"odkształcalność S1",
+			"na najbardziej wymagające podłoża, w tym ogrzewanie podłogowe, płyty G-K, OSB",
+			"spoinowanie możliwe już po 12 h",
+			"brak spływu nawet przy dużych formatach",
+			"wysoka stabilizacja płyt wielkoformatowych (nawet > 1 m2), układanych na powierzchniach poziomych",
+			"3 w 1 szpachlowanie/ klejenie/ szpachlowanie i klejenie",
+			"możliwość pracy w wysokich temperaturach 5-35 stopni",
+			"do małych, średnich, dużych i wielkich formatów",
+			"dostępny w nowoczesnym opakowaniu foliowym"
+		],
+		"parametres": [
+			"grubość warstwy: 2 - 15 mm",
+			"temperatura stosowania: od +5 °C do +35 °C",
+			"czas gotowości do pracy: ok. 4 godziny",
+			"spoinowanie: po 12 godzinach",
+			"zużycie dla płytek 30 x 30 cm: od 2,0 kg/m2"
+		]
+	},
+	{
+		"type": 0,
+		"name": "ATLAS GEOFLEX BIAŁY",
+		"desc": "klej żelowy wysokoelastyczny (2-15 mm), typ C2TE",
+		"attributes": [
+			"ogranicza wystąpienie przebarwień okładzin z kamienia naturalnego i marmuru",
+			"szeroki zakres grubości warstwy kleju (2-15 mm)",
+			"zerowy spływ okładziny",
+			"możliwość wchodzenia na okładzinę i spoinowania jej już po 12 godzinach"
+		],
+		"parametres": [
+			"grubość stosowanej warstwy: 2 - 15 mm",
+			"temperatura stosowania: od +5 °C do +35 °C",
+			"czas gotowości do pracy: ok. 4 godziny",
+			"spoinowanie: po 12 godzinach",
+			"zużycie dla płytek 30 x 30 cm: od 2,0 kg/m2"
+		]
+	},
+	{
+		"type": 0,
+		"name": "ATLAS GEOFLEX",
+		"desc": "wysokoelastyczny klej żelowy (2-15 mm), typ C2TE",
+		"attributes": [
+			"na najbardziej wymagające podłoża w tym ogrzewanie podłogowe, płyty g-k, OSB",
+			"2 wody zarobowe = 2 konsystencje",
+			"spoinowanie możliwe już po 12 h",
+			"bardzo dobry rozpływ pod płytką",
+			"brak spływu nawet przy dużych formatach",
+			"3 w 1 szpachlowanie/ klejenie/ szpachlowanie i klejenie",
+			"możliwość pracy w wysokich temperaturach 5-35 stopni",
+			"do małych , średnich i dużych formatów",
+			"dostępny w nowoczesnym opakowaniu foliowym"
+		],
+		"parametres": [
+			"grubość warstwy: 2 - 15 mm",
+			"temperatura stosowania: od +5 °C do +35 °C",
+			"czas gotowości do pracy: ok. 4 godziny",
+			"spoinowanie: po 12 godzinach",
+			"zużycie dla płytek 30 x 30 cm: od 2,0 kg/m2"
+		]
+	},
+	{
+		"type": 0,
+		"name": "ATLAS PLUS BIAŁY",
+		"desc": "klej wysokoelastyczny odkształcalny (2-10 mm), typ C2TE S1",
+		"attributes": [
+			"chroni przez przebarwieniami",
+			"zawiera biały cement",
+			"wysoce elastyczny",
+			"klejenie płytek od góry",
+			"wydłużony czas otwarty"
+		],
+		"parametres": [
+			"grubość warstwy: 2 - 10 mm",
+			"temperatura stosowania: od +5 °C do +25 °C",
+			"czas gotowości do pracy: ok. 4 godziny",
+			"spoinowanie: po 24 godzinach",
+			"średnie zużycie dla płytek 30 x 30 cm: 2,0 kg/m2"
+		]
+	}
+]
