@@ -2,7 +2,6 @@ package mobilne.mobilneproject;
 
 
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -32,9 +31,7 @@ public class DetailsFragment extends Fragment {
     private RecyclerView parametersList;
     private DeleteItemCallback diCallback;
 
-    public DetailsFragment() {
-        // Required empty public constructor
-    }
+    public DetailsFragment() { }
 
     public static DetailsFragment newInstance(Item item) {
         Bundle args = new Bundle();

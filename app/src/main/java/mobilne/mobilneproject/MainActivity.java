@@ -7,6 +7,9 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.FrameLayout;
 
+import com.nispok.snackbar.Snackbar;
+import com.nispok.snackbar.SnackbarManager;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -109,12 +112,16 @@ public class MainActivity extends AppCompatActivity implements ActivityCallback,
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.setCustomAnimations(R.animator.enter_right, R.animator.exit_left, R.animator.enter_left, R.animator.exit_right);
         fragmentTransaction.replace(R.id.fragment_container, fragment);
-        fragmentTransaction.addToBackStack("");
+        if(!(fragment instanceof ListFragment))
+            fragmentTransaction.addToBackStack("");
         fragmentTransaction.commit();
     }
 
     @Override
     public void deleteItem(Item item) {
+        SnackbarManager.show(
+                Snackbar.with(getApplicationContext())
+                        .text("Usunięto: " + item.getName()).duration(1000), this);
         itemsList.remove(item);
         FragmentManager fm = getSupportFragmentManager();
         fm.popBackStack();

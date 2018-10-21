@@ -11,19 +11,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.Reader;
-import java.io.Serializable;
-import java.io.StringWriter;
-import java.io.UnsupportedEncodingException;
-import java.io.Writer;
 import java.util.ArrayList;
 
 
@@ -73,21 +60,24 @@ public class ListFragment extends Fragment {
         this.recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         this.recyclerView.setAdapter(new RecyclerView.Adapter() {
             @NonNull
-            //Tworzenie widoku
+
             @Override
             public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
                 return new ItemViewHolder(LayoutInflater.from(getActivity()).inflate(R.layout.view_holder, parent, false));
             }
 
-            //Bind, gdy juz jest stworzony
             @Override
             public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, final int position) {
-                ((ItemViewHolder) holder).configure(new View.OnClickListener() {
+                View.OnClickListener ocl = new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         startDetailsFragment(position);
                     }
-                }, itemsList.get(position).getName(), itemsList.get(position).getDesc(), holder.itemView.getResources().getIdentifier(itemsList.get(position).getImage(), "drawable", getActivity().getPackageName()));
+                };
+                String name = itemsList.get(position).getName();
+                String desc = itemsList.get(position).getDesc();
+                int img = holder.itemView.getResources().getIdentifier(itemsList.get(position).getImage(), "drawable", getActivity().getPackageName());
+                ((ItemViewHolder) holder).configure(ocl, name, desc, img);
             }
 
             @Override

@@ -1,10 +1,14 @@
 package mobilne.mobilneproject;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import java.io.InputStream;
 
 public class ItemViewHolder extends RecyclerView.ViewHolder {
 
@@ -20,7 +24,9 @@ public class ItemViewHolder extends RecyclerView.ViewHolder {
     }
 
     public void configure(View.OnClickListener clickListener, String name, String desc, int resourceImage) {
-        this.imageView.setImageResource(resourceImage);
+        InputStream is = itemView.getResources().openRawResource(resourceImage);
+        Bitmap imageBitmap = BitmapFactory.decodeStream(is);
+        this.imageView.setImageBitmap(imageBitmap);
         this.itemTitle.setText(name);
         this.itemDesc.setText(desc);
         this.itemView.setOnClickListener(clickListener);
