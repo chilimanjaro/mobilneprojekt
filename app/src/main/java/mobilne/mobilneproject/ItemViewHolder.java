@@ -23,7 +23,6 @@ public class ItemViewHolder extends RecyclerView.ViewHolder {
         this.imageView.setImageResource(resourceImage);
         this.itemTitle.setText(name);
         this.itemDesc.setText(desc);
-
         this.itemView.setOnClickListener(clickListener);
     }
 }

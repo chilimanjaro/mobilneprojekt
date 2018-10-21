@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">MobilneProject</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="main_parameters">Główne parametry</string>
+    <string name="main_attributes">Główne właściwości</string>
+    <string name="delete">Usuń</string>
 </resources>

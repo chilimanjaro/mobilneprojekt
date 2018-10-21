@@ -1,68 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="25dp"
-    tools:context=".DetailsFragment">
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <!-- TODO: Update blank fragment layout -->
-
-    <ImageView
-        android:id="@+id/item_image"
-        android:layout_width="wrap_content"
-        android:layout_height="170dp"
-        android:layout_marginBottom="10dp"
-        android:src="@drawable/atlas_atut_p_1490_20171222_154933" />
-
-    <TextView
-        android:id="@+id/item_title"
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        android:textAppearance="@android:style/TextAppearance.Material.Headline" />
+        android:orientation="vertical"
+        android:overScrollMode="always"
+        android:padding="25dp"
+        tools:context=".DetailsFragment">
 
-    <TextView
-        android:id="@+id/item_description"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="15dp"
-        android:text="TextView" />
+        <ImageView
+            android:id="@+id/item_image"
+            android:layout_width="wrap_content"
+            android:layout_height="170dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/atlas_atut_p_1490_20171222_154933" />
 
-    <TextView
-        android:id="@+id/item_attributes_title"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fontFamily="sans-serif"
-        android:text="Główne właściwości"
-        android:textAppearance="@android:style/TextAppearance.Material.Title"
-        android:textSize="16sp" />
+        <TextView
+            android:id="@+id/item_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textAppearance="@android:style/TextAppearance.Material.Headline" />
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/item_attributes_list"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:overScrollMode="never"
-        android:scrollbars="none" />
+        <TextView
+            android:id="@+id/item_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:text="TextView" />
 
-    <TextView
-        android:id="@+id/item_parametres_title"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fontFamily="sans-serif"
-        android:text="Główne parametry"
-        android:textAppearance="@android:style/TextAppearance.Material.Title"
-        android:textSize="16sp" />
+        <TextView
+            android:id="@+id/item_attributes_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:text="@string/main_attributes"
+            android:textAppearance="@android:style/TextAppearance.Material.Title"
+            android:textSize="16sp" />
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/item_parametres_list"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:overScrollMode="never"
-        android:scrollbars="none" >
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/item_attributes_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:overScrollMode="never"
+            android:scrollbars="none" />
 
-    </android.support.v7.widget.RecyclerView>
-</LinearLayout>
+        <TextView
+            android:id="@+id/item_parametres_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:text="@string/main_parameters"
+            android:textAppearance="@android:style/TextAppearance.Material.Title"
+            android:textSize="16sp" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/item_parametres_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:overScrollMode="never"
+            android:scrollbars="none">
+
+        </android.support.v7.widget.RecyclerView>
+
+        <Button
+            android:id="@+id/delete_button"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:backgroundTint="#bf2b2b"
+            android:text="@string/delete"
+            android:textColor="@color/backgroundColor" />
+
+    </LinearLayout>
+
+</ScrollView>

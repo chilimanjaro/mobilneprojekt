@@ -1,6 +1,8 @@
 package mobilne.mobilneproject;
 
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -10,6 +12,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -18,15 +21,16 @@ import android.widget.TextView;
  * A simple {@link Fragment} subclass.
  */
 
-//TODO - pobawdzić bundle, żeby wysyłać klasę Item do DetailsFragment
-
 
 public class DetailsFragment extends Fragment {
+    private Item item;
+    private Button deleteButton;
     private ImageView imageView;
     private TextView itemTitle;
     private TextView itemDesc;
     private RecyclerView attributesList;
     private RecyclerView parametersList;
+    private DeleteItemCallback diCallback;
 
     public DetailsFragment() {
         // Required empty public constructor
@@ -41,11 +45,8 @@ public class DetailsFragment extends Fragment {
         return fragment;
     }
 
-
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_details, container, false);
     }
 
@@ -56,8 +57,11 @@ public class DetailsFragment extends Fragment {
         this.imageView = view.findViewById(R.id.item_image);
         this.itemTitle = view.findViewById(R.id.item_title);
         this.itemDesc = view.findViewById(R.id.item_description);
+        this.attributesList = view.findViewById(R.id.item_attributes_list);
+        this.parametersList = view.findViewById(R.id.item_parametres_list);
+        this.deleteButton = view.findViewById(R.id.delete_button);
 
-        Item item = (Item) getArguments().getSerializable("item");
+        item = (Item) getArguments().getSerializable("item");
 
         int resourceImage = view.getResources().getIdentifier(item.getImage(), "drawable", getActivity().getPackageName());
         this.imageView.setImageResource(resourceImage);
@@ -65,15 +69,23 @@ public class DetailsFragment extends Fragment {
         this.itemTitle.setText(item.getName());
         this.itemDesc.setText(item.getDesc());
 
-        this.attributesList = view.findViewById(R.id.item_attributes_list);
-        this.parametersList = view.findViewById(R.id.item_parametres_list);
-
         configurateLists();
+
+        this.deleteButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                diCallback.deleteItem(item);
+            }
+        });
+    }
+
+    @Override
+    public void onAttach(Activity activity) {
+        super.onAttach(activity);
+        diCallback = (DeleteItemCallback) activity;
     }
 
     private void configurateLists() {
-        final Item item = (Item) getArguments().getSerializable("item");
-
         this.attributesList.setLayoutManager(new LinearLayoutManager(getActivity()));
         this.attributesList.setAdapter(new RecyclerView.Adapter() {
             @NonNull
