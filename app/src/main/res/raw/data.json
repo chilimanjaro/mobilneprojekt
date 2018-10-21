@@ -1,121 +1,430 @@
 [
-	{
-		"type": 0,
-		"name": "ATLAS PLUS - nowy",
-		"desc": "klej wysokoelastyczny odkształcalny 2-10 mm, C2TE S1, PODWÓJNA MOC WŁÓKIEN I POLIMERÓW",
-		"attributes": [
-			"doskonale parametry robocze i aplikacyjne",
-			"bardzo wysoka przyczepność",
-			"brak spływu dla okładzin wielkoformatowych",
-			"bez efektu wciągania"
-		],
-		"parameters": [
-			"grubość stosowanej warstwy: 2 - 10 mm",
-			"temperatura stosowania: od +1 °C do +25 °C",
-			"czas gotowości do pracy: ok. 4 godziny",
-			"spoinowanie: po 16 / 24 godzinach",
-			"zużycie dla płytek 30 x 30 cm: od 2,0 kg/m2"
-		]
-	},
-	{
-		"type": 0,
-		"name": "OK! KLEJ UELASTYCZNIONY",
-		"desc": "podwójna moc włókien",
-		"attributes": [
-			"pozwala uzyskać efekt zbrojenia rozproszonego",
-			"większa odporność na skoki temperatur w czasie użytkowania",
-			"bez efektu zapadania się płytek",
-			"brak spływu podczas układanie płytek „od góry” ściany"
-		],
-		"parameters": [
-			"grubość stosowanej warstwy: 2 - 10 mm",
-			"temperatura stosowania: od +5 °C do +30 °C",
-			"czas gotowości do pracy: ok. 4 godziny",
-			"spoinowanie: po 12/24 godzinach",
-			"zużycie dla płytek 30 x 30 cm: od 2,2 kg/m2"
-		]
-	},
-	{
-		"type": 0,
-		"name": "ATLAS ULTRA GEOFLEX",
-		"desc": "klej żelowy, wysokoelastyczny, odkształcalny (2-15 mm), typ C2TE S1",
-		"attributes": [
-			"odkształcalność S1",
-			"na najbardziej wymagające podłoża, w tym ogrzewanie podłogowe, płyty G-K, OSB",
-			"spoinowanie możliwe już po 12 h",
-			"brak spływu nawet przy dużych formatach",
-			"wysoka stabilizacja płyt wielkoformatowych (nawet > 1 m2), układanych na powierzchniach poziomych",
-			"3 w 1 szpachlowanie/ klejenie/ szpachlowanie i klejenie",
-			"możliwość pracy w wysokich temperaturach 5-35 stopni",
-			"do małych, średnich, dużych i wielkich formatów",
-			"dostępny w nowoczesnym opakowaniu foliowym"
-		],
-		"parameters": [
-			"grubość warstwy: 2 - 15 mm",
-			"temperatura stosowania: od +5 °C do +35 °C",
-			"czas gotowości do pracy: ok. 4 godziny",
-			"spoinowanie: po 12 godzinach",
-			"zużycie dla płytek 30 x 30 cm: od 2,0 kg/m2"
-		]
-	},
-	{
-		"type": 0,
-		"name": "ATLAS GEOFLEX BIAŁY",
-		"desc": "klej żelowy wysokoelastyczny (2-15 mm), typ C2TE",
-		"attributes": [
-			"ogranicza wystąpienie przebarwień okładzin z kamienia naturalnego i marmuru",
-			"szeroki zakres grubości warstwy kleju (2-15 mm)",
-			"zerowy spływ okładziny",
-			"możliwość wchodzenia na okładzinę i spoinowania jej już po 12 godzinach"
-		],
-		"parameters": [
-			"grubość stosowanej warstwy: 2 - 15 mm",
-			"temperatura stosowania: od +5 °C do +35 °C",
-			"czas gotowości do pracy: ok. 4 godziny",
-			"spoinowanie: po 12 godzinach",
-			"zużycie dla płytek 30 x 30 cm: od 2,0 kg/m2"
-		]
-	},
-	{
-		"type": 0,
-		"name": "ATLAS GEOFLEX",
-		"desc": "wysokoelastyczny klej żelowy (2-15 mm), typ C2TE",
-		"attributes": [
-			"na najbardziej wymagające podłoża w tym ogrzewanie podłogowe, płyty g-k, OSB",
-			"2 wody zarobowe = 2 konsystencje",
-			"spoinowanie możliwe już po 12 h",
-			"bardzo dobry rozpływ pod płytką",
-			"brak spływu nawet przy dużych formatach",
-			"3 w 1 szpachlowanie/ klejenie/ szpachlowanie i klejenie",
-			"możliwość pracy w wysokich temperaturach 5-35 stopni",
-			"do małych , średnich i dużych formatów",
-			"dostępny w nowoczesnym opakowaniu foliowym"
-		],
-		"parameters": [
-			"grubość warstwy: 2 - 15 mm",
-			"temperatura stosowania: od +5 °C do +35 °C",
-			"czas gotowości do pracy: ok. 4 godziny",
-			"spoinowanie: po 12 godzinach",
-			"zużycie dla płytek 30 x 30 cm: od 2,0 kg/m2"
-		]
-	},
-	{
-		"type": 0,
-		"name": "ATLAS PLUS BIAŁY",
-		"desc": "klej wysokoelastyczny odkształcalny (2-10 mm), typ C2TE S1",
-		"attributes": [
-			"chroni przez przebarwieniami",
-			"zawiera biały cement",
-			"wysoce elastyczny",
-			"klejenie płytek od góry",
-			"wydłużony czas otwarty"
-		],
-		"parameters": [
-			"grubość warstwy: 2 - 10 mm",
-			"temperatura stosowania: od +5 °C do +25 °C",
-			"czas gotowości do pracy: ok. 4 godziny",
-			"spoinowanie: po 24 godzinach",
-			"średnie zużycie dla płytek 30 x 30 cm: 2,0 kg/m2"
-		]
-	}
+  {
+    "type": 0,
+    "name": "ATLAS PLUS - nowy",
+    "desc": "klej wysokoelastyczny odkształcalny 2-10 mm, C2TE S1, PODWÓJNA MOC WŁÓKIEN I POLIMERÓW",
+    "attributes": [
+      "doskonale parametry robocze i aplikacyjne",
+      "bardzo wysoka przyczepność",
+      "brak spływu dla okładzin wielkoformatowych",
+      "bez efektu wciągania"
+    ],
+    "parameters": [
+      "grubość stosowanej warstwy: 2 - 10 mm",
+      "temperatura stosowania: od +1 °C do +25 °C",
+      "czas gotowości do pracy: ok. 4 godziny",
+      "spoinowanie: po 16 / 24 godzinach",
+      "zużycie dla płytek 30 x 30 cm: od 2,0 kg/m2"
+    ],
+    "image": "atlas_plus_nowy_p_1940_20180606_133703"
+  },
+  {
+    "type": 0,
+    "name": "OK! KLEJ UELASTYCZNIONY",
+    "desc": "podwójna moc włókien",
+    "attributes": [
+      "pozwala uzyskać efekt zbrojenia rozproszonego",
+      "większa odporność na skoki temperatur w czasie użytkowania",
+      "bez efektu zapadania się płytek",
+      "brak spływu podczas układanie płytek „od góry” ściany"
+    ],
+    "parameters": [
+      "grubość stosowanej warstwy: 2 - 10 mm",
+      "temperatura stosowania: od +5 °C do +30 °C",
+      "czas gotowości do pracy: ok. 4 godziny",
+      "spoinowanie: po 12/24 godzinach",
+      "zużycie dla płytek 30 x 30 cm: od 2,2 kg/m2"
+    ],
+    "image": "ok_klej_uelastyczniony_p_1939_20180117_142248"
+  },
+  {
+    "type": 0,
+    "name": "ATLAS ULTRA GEOFLEX",
+    "desc": "klej żelowy, wysokoelastyczny, odkształcalny (2-15 mm), typ C2TE S1",
+    "attributes": [
+      "odkształcalność S1",
+      "na najbardziej wymagające podłoża, w tym ogrzewanie podłogowe, płyty G-K, OSB",
+      "spoinowanie możliwe już po 12 h",
+      "brak spływu nawet przy dużych formatach",
+      "wysoka stabilizacja płyt wielkoformatowych (nawet > 1 m2), układanych na powierzchniach poziomych",
+      "3 w 1 szpachlowanie/ klejenie/ szpachlowanie i klejenie",
+      "możliwość pracy w wysokich temperaturach 5-35 stopni",
+      "do małych, średnich, dużych i wielkich formatów",
+      "dostępny w nowoczesnym opakowaniu foliowym"
+    ],
+    "parameters": [
+      "grubość warstwy: 2 - 15 mm",
+      "temperatura stosowania: od +5 °C do +35 °C",
+      "czas gotowości do pracy: ok. 4 godziny",
+      "spoinowanie: po 12 godzinach",
+      "zużycie dla płytek 30 x 30 cm: od 2,0 kg/m2"
+    ],
+    "image": "atlas_ultra_geoflex_p_1799_20171222_154101"
+  },
+  {
+    "type": 0,
+    "name": "ATLAS GEOFLEX BIAŁY",
+    "desc": "klej żelowy wysokoelastyczny (2-15 mm), typ C2TE",
+    "attributes": [
+      "ogranicza wystąpienie przebarwień okładzin z kamienia naturalnego i marmuru",
+      "szeroki zakres grubości warstwy kleju (2-15 mm)",
+      "zerowy spływ okładziny",
+      "możliwość wchodzenia na okładzinę i spoinowania jej już po 12 godzinach"
+    ],
+    "parameters": [
+      "grubość stosowanej warstwy: 2 - 15 mm",
+      "temperatura stosowania: od +5 °C do +35 °C",
+      "czas gotowości do pracy: ok. 4 godziny",
+      "spoinowanie: po 12 godzinach",
+      "zużycie dla płytek 30 x 30 cm: od 2,0 kg/m2"
+    ],
+    "image": "atlas_geoflex_bialy_p_1796_20171222_154530"
+  },
+  {
+    "type": 0,
+    "name": "ATLAS GEOFLEX",
+    "desc": "wysokoelastyczny klej żelowy (2-15 mm), typ C2TE",
+    "attributes": [
+      "na najbardziej wymagające podłoża w tym ogrzewanie podłogowe, płyty g-k, OSB",
+      "2 wody zarobowe = 2 konsystencje",
+      "spoinowanie możliwe już po 12 h",
+      "bardzo dobry rozpływ pod płytką",
+      "brak spływu nawet przy dużych formatach",
+      "3 w 1 szpachlowanie/ klejenie/ szpachlowanie i klejenie",
+      "możliwość pracy w wysokich temperaturach 5-35 stopni",
+      "do małych , średnich i dużych formatów",
+      "dostępny w nowoczesnym opakowaniu foliowym"
+    ],
+    "parameters": [
+      "grubość warstwy: 2 - 15 mm",
+      "temperatura stosowania: od +5 °C do +35 °C",
+      "czas gotowości do pracy: ok. 4 godziny",
+      "spoinowanie: po 12 godzinach",
+      "zużycie dla płytek 30 x 30 cm: od 2,0 kg/m2"
+    ],
+    "image": "atlas_geoflex_p_1613_20171222_154506"
+  },
+  {
+    "type": 0,
+    "name": "ATLAS PLUS BIAŁY",
+    "desc": "klej wysokoelastyczny odkształcalny (2-10 mm), typ C2TE S1",
+    "attributes": [
+      "chroni przez przebarwieniami",
+      "zawiera biały cement",
+      "wysoce elastyczny",
+      "klejenie płytek od góry",
+      "wydłużony czas otwarty"
+    ],
+    "parameters": [
+      "grubość warstwy: 2 - 10 mm",
+      "temperatura stosowania: od +5 °C do +25 °C",
+      "czas gotowości do pracy: ok. 4 godziny",
+      "spoinowanie: po 24 godzinach",
+      "średnie zużycie dla płytek 30 x 30 cm: 2,0 kg/m2"
+    ],
+    "image": "atlas_plus_bialy_p_499_20171222_153912"
+  },
+  {
+    "type": 0,
+    "name": "ATLAS PLUS MEGA",
+    "desc": "grubowarstwowy klej wysokoelastyczny, odkształcalny (4-20 mm), typ C2E S1",
+    "attributes": [
+      "samorozpływny, grubowarstwowy",
+      "wysoce elastyczny",
+      "wydłużony czas otwarty",
+      "ułatwia poziomowanie płytek",
+      "idealnie wypełnia przestrzeń pod płytką"
+    ],
+    "parameters": [
+      "grubość warstwy: 4 - 20 mm",
+      "temperatura stosowania: od +5 °C do +25 °C",
+      "czas gotowości do pracy: ok. 4 godziny",
+      "spoinowanie: po 24 godzinach",
+      "zużycie dla płytek 30 x 30 cm: od 3,0 kg/m2"
+    ],
+    "image": "atlas_plus_mega_p_524_20171222_153935"
+  },
+  {
+    "type": 0,
+    "name": "ATLAS PLUS EXPRESS",
+    "desc": "szybkowiążący, wysokoodkształcalny, odkształcalny (2-5 mm), typ C2FTE S1",
+    "attributes": [
+      "zalecany do szybkich remontów",
+      "ruch pieszy i spoinowanie po 4 h",
+      "bardzo wysoka elastyczność",
+      "wydłużony czas otwarty",
+      "przyklejanie płytek od góry"
+    ],
+    "parameters": [
+      "grubość stosowanej warstwy: 2 - 5 mm",
+      "temperatura stosowania: od +5 °C do +25 °C",
+      "czas gotowości do pracy: ok. 1 godziny",
+      "spoinowanie: po 4 godzinach",
+      "zużycie dla płytek 30 x 30 cm: od 2,0 kg/m2"
+    ],
+    "image": "atlas_plus_express_p_331_20171222_154032"
+  },
+  {
+    "type": 0,
+    "name": "ATLAS PLUS MEGA BIAŁY",
+    "desc": "biały, grubowarstwowy, wysokoelastyczny, odkształcalny (4-20 mm), typ C2E S1",
+    "attributes": [
+      "chroni przed przebarwieniami",
+      "2 w 1 - klei i wyrównuje",
+      "samorozpływny",
+      "bez efektu zapadania się płytki"
+    ],
+    "parameters": [
+      "grubość warstwy: 4 - 20 mm",
+      "temperatura stosowania: od +5 °C do +25 °C",
+      "czas gotowości do pracy: ok. 4 godziny",
+      "spoinowanie: po 24 godzinach",
+      "zużycie dla płytek 30 x 30 cm: od 3,0 kg/m2"
+    ],
+    "image": "atlas_plus_mega_bialy_p_385_20171222_154009"
+  },
+  {
+    "type": 0,
+    "name": "ATLAS ELASTYK",
+    "desc": "klej wysokoelastyczny (2-10 mm), typ C2TE",
+    "attributes": [
+      "ATLAS ELASTYK produkowany jest w postaci suchej mieszanki najwyższej jakości spoiwa cementowego, kruszyw oraz specjalnie dobranych środków modyfikujących. ",
+      "Posiada zwiększoną przyczepność – minimalna przyczepność do podłoża wynosi 1,0 N/mm2.",
+      "Jeszcze łatwiejsza aplikacja - klej jest łatwiejszy do wymieszania i nałożenia, nie spływa z pacy.",
+      "Zakres grubości warstwy kleju (2-10 mm) pozwala na:",
+      "- cienkowarstwowe przyklejenie okładzin na równym podłożu, ",
+      "- cienkowarstwowe przyklejanie okładzin na nierównym podłożu, poprzedzone szpachlowaniem wyrównującym.",
+      "Wydłużony czas otwarty - umożliwia przyłożenie płytki do kleju nawet 30 minut od momentu naniesienia go na podłoże - można jednorazowo nanieść go na większą powierzchnię i dzięki temu minimalizować czas pracy.",
+      "Obniżony spływ - pozwala przyklejać płytki „od góry” – właściwa konsystencja i grubość warstwy eliminują spływ kleju. Umożliwia to rozpoczęcie prac od góry ściany i uniknięcie przyklejania docinanych płytek na jej eksponowanej powierzchni. "
+    ],
+    "parameters": [
+      "grubość warstwy: 2 - 10 mm",
+      "temperatura stosowania: od +5 °C do +25 °C",
+      "czas gotowości do pracy: ok. 4 godziny",
+      "spoinowanie: po 24 godzinach",
+      "zużycie dla płytek 30 x 30 cm: od 2,0 kg/m2"
+    ],
+    "image": "atlas_elastyk_p_435_20171228_091820"
+  },
+  {
+    "type": 0,
+    "name": "ZAPRAWA KLEJOWA UELASTYCZNIONA ATLAS",
+    "desc": "klej uniwersalny typu C1TE (2-10 mm)",
+    "attributes": [
+      "uelastyczniona i wydajna formuła",
+      "doskonałe parametry robocze",
+      "wydłużony czas otwarty",
+      "obniżony spływ"
+    ],
+    "parameters": [
+      "grubość stosowanej warstwy: 2 - 10 mm",
+      "temperatura stosowania: od +5 °C do +25 °C",
+      "czas gotowości do pracy: ok. 4 godziny",
+      "spoinowanie: po 24 godzinach",
+      "zużycie dla płytek 30 x 30 cm: od 2,0 kg/m2"
+    ],
+    "image": "zaprawa_klejowa_uelastyczniona_atlas_p_411_20171222_154727"
+  },
+  {
+    "type": 0,
+    "name": "ATLAS ATUT",
+    "desc": "klej do płytek, typ C1T (2-10 mm)",
+    "attributes": [
+      "do płytek ceramicznych w tym mozaiki i gresu",
+      "do kuchni i łazienek",
+      "umożliwia przyklejanie płytek od góry ściany"
+    ],
+    "parameters": [
+      "grubość stosowanej warstwy: 2 - 10 mm",
+      "temperatura stosowania: od +5 °C do +25 °C",
+      "czas gotowości do pracy: ok. 4 godziny",
+      "spoinowanie: po 24 godzinach",
+      "zużycie dla płytek 30 x 30 cm: od 2,2 kg /m2"
+    ],
+    "image": "atlas_atut_p_1490_20171222_154933"
+  },
+  {
+    "type": 0,
+    "name": "ATLAS MIG 2",
+    "desc": "szybkowiążący klej do gresu (2–5 mm), typ C1FTE",
+    "attributes": [
+      "silnie wiąże gres z podłożem",
+      "ruch pieszy i spoinowanie po 4 h",
+      "układanie płytek od góry",
+      "wydłużony czas otwarty"
+    ],
+    "parameters": [
+      "grubość warstwy: 2 - 5 mm",
+      "temperatura stosowania: od +5 °C do +25 °C",
+      "czas gotowości do pracy: ok. 1 godziny",
+      "spoinowanie: po 4 godzinach",
+      "zużycie dla płytek 30 x 30 cm: od 2,2 kg/m2"
+    ],
+    "image": "atlas_mig_2_p_371_20171222_154806"
+  },
+  {
+    "type": 0,
+    "name": "ATLAS KLEJ DO GLAZURY I TERAKOTY",
+    "desc": "(2-10 mm), typ C1T",
+    "attributes": [
+      "układanie płytek od góry",
+      "posiada dobrą przyczepność do płytek"
+    ],
+    "parameters": [
+      "grubość warstwy: 2 - 10 mm",
+      "temperatura stosowania: od +5 °C do +25 °C",
+      "czas gotowości do pracy: ok. 4 godziny",
+      "spoinowanie: po 24 godzinach",
+      "zużycie dla płytek 30 x 30 cm: od 3,0 kg /m2"
+    ],
+    "image": "atlas_klej_do_glazury_i_terakoty_p_1699_20171222_154906"
+  },
+  {
+    "type": 0,
+    "name": "ATLAS KLEJ DO ŁAZIENKI I KUCHNI",
+    "desc": "klej elastyczny (2-10 mm), typ C2T",
+    "attributes": [
+      "wysoka przyczepność i elastyczność",
+      "do glazury, terakoty i gresu",
+      "na ogrzewanie podłogowe i ścienne",
+      "na trudne podłoża - m.in. płyty g-k"
+    ],
+    "parameters": [
+      "grubość warstwy: 2 - 10 mm",
+      "temperatura stosowania: od +5 °C do +25 °C",
+      "czas gotowości do pracy: ok. 4 godziny",
+      "spoinowanie: po 24 godzinach",
+      "zużycie dla płytek 30 x 30 cm: od 2,0 kg/m2"
+    ],
+    "image": "atlas_klej_do_lazienki_i_kuchni_p_1687_20171222_154610"
+  },
+  {
+    "type": 0,
+    "name": "ATLAS KLEJ DO PŁYTEK",
+    "desc": "(2-10 mm), typ C1T",
+    "attributes": [
+      "układanie płytek od góry",
+      "posiada dobrą przyczepność do płytek"
+    ],
+    "parameters": [
+      "grubość stosowanej warstwy: 2 - 10 mm",
+      "temperatura stosowania: od +5 °C do +25 °C",
+      "czas gotowości do pracy: ok. 4 godziny",
+      "spoinowanie: po 24 godzinach",
+      "zużycie dla płytek 30 x 30 cm: od 3,0 kg/m2"
+    ],
+    "image": "atlas_klej_do_plytek_p_1700_20171222_154838"
+  },
+  {
+    "type": 1,
+    "name": "ATLAS FUGA EPOKSYDOWA",
+    "desc": "dwuskładnikowa zaprawa do spoinowania (1-10 mm)",
+    "attributes": [
+      "bardzo wysoka wytrzymałość mechaniczna",
+      "wysoka odporność na działanie czynników chemicznych i barwiących, w tym: kwasów, tłuszczów, alkoholi (wino, spirytus), soków, sosów, konfitur i silnych środków czyszczących",
+      "odporność na działanie wysokich i niskich temperatur",
+      "idealnie gładka powierzchnia, ułatwiająca utrzymanie czystości i tworząca perfekcyjny efekt końcowy",
+      "łatwość aplikacji, mycia i profilowania",
+      "higiena i bezpieczeństwo użytkowania"
+    ],
+    "parameters": [
+      "grubość spoiny: 1 - 10 mm ",
+      "temperatura od +5°C do + 25°C",
+      "czas gotowości do pracy 45 minut",
+      "ruch pieszy po ok 24 h",
+      "wytrzymałość mechaniczna i chemiczna – po 7 dniach"
+    ],
+    "image": "atlas_fuga_epoksydowa_p_1670_20171228_100309"
+  },
+  {
+    "type": 1,
+    "name": "ATLAS FUGA ARTIS",
+    "desc": "drobnokruszywowa zaprawa do spoinowania (1-25 mm)",
+    "attributes": [
+      "zwiększona odporność na powstawanie mikrorys i spękań, podczas długotrwałego użytkowania - dzięki zawartości odpowiednio wyselekcjonowanych kruszyw i mieszanki cementów",
+      "bardzo wysoka odporność mechaniczna – nawet na średnie i wysokie obciążenia eksploatacyjne, w tym intensywne użytkowanie powierzchni okładzin, częste mycie, szorowanie i ścieranie",
+      "krótki czas wiązania – lekki ruch pieszy możliwy jest już po 3 godzinach od fugowania, co znacznie przyspiesza ostateczne czyszczenie okładziny i umożliwia szybkie oddanie jej do użytku",
+      "posiada wysoką odporność na temperatury - od -30 °C do +80 °C",
+      "gładka powierzchnia – możliwa do uzyskania dzięki zawartości bardzo drobnego kruszywa"
+    ],
+    "parameters": [
+      "grubość spoiny: 1 - 25 mm ",
+      "temperatura stosowania: od +5 °C do + 35 °C",
+      "czas gotowości do pracy: 40 minut",
+      "ruch pieszy: po ok 3 h",
+      "pełne obciążenie: po ok. 24 h"
+    ],
+    "image": "atlas_fuga_artis_p_396_20171228_100345"
+  },
+  {
+    "type": 1,
+    "name": "ATLAS FUGA ELASTYCZNA",
+    "desc": "drobnokruszywowa cementowa zaprawa do spoinowania (1 - 7 mm)",
+    "attributes": [
+      "wysoka odporność mechaniczna – nawet na średnie i wysokie obciążenia eksploatacyjne, w tym intensywne użytkowanie powierzchni okładzin, częste mycie, szorowanie i ścieranie",
+      "szeroki zakres zastosowań - można ja stosować do wszelkich okładzin, na dowolnym podłożu, wewnątrz i na zewnątrz budynków",
+      "gładka powierzchnia – możliwa do uzyskania dzięki zawartości bardzo drobnego kruszywa"
+    ],
+    "parameters": [
+      "grubość spoiny: 1 - 7 mm ",
+      "temperatura stosowania: od +5 °C do + 25 °C",
+      "czas gotowości do pracy: ok. 2 h",
+      "ruch pieszy: po ok. 24 h",
+      "pełne obciążenie: po ok. 24 h"
+    ],
+    "image": "atlas_fuga_elastyczna_p_1667_20171228_100419"
+  },
+  {
+    "type": 1,
+    "name": "ATLAS FUGA",
+    "desc": "drobnokruszywowa cementowa zaprawa do spoinowania ( 1 - 6 mm)",
+    "attributes": [
+      "wysoka odporność mechaniczna na częste mycie, szorowanie i ścieranie",
+      "posiada dużą przyczepność do brzegów płytek",
+      "gładka powierzchnia, uzyskana dzięki zawartości bardzo drobnego kruszywa"
+    ],
+    "parameters": [
+      "grubość spoiny: 1 - 6 mm",
+      "temperatura stosowania: od +5 °C do + 25 °C",
+      "czas gotowości do pracy: ok. 2 h",
+      "ruch pieszy: po ok. 24 h",
+      "pełne obciążenie po ok. 24 h"
+    ],
+    "image": "atlas_fuga_p_1669_20171228_100450"
+  },
+  {
+    "type": 1,
+    "name": "ATLAS FUGA DEKORACYJNA",
+    "desc": "dekoracyjna zaprawa do spoinowania ( 1-15 mm)",
+    "attributes": [
+      "wysoka odporność mechaniczna na częste mycie, szorowanie i ścieranie",
+      "posiada dużą przyczepność do brzegów płytek",
+      "gładka powierzchnia, uzyskana dzięki zawartości bardzo drobnego kruszywa"
+    ],
+    "parameters": [
+      "grubość spoiny: 1 – 15 mm ",
+      "temperatura stosowania: od +5 °C do + 35 °C",
+      "czas gotowości do pracy: ok. 2 h",
+      "pełne obciążenie: po ok. 24 h"
+    ],
+    "image": "atlas_fuga_dekoracyjna_p_1668_20171228_100525"
+  },
+  {
+    "type": 1,
+    "name": "ATLAS FUGA WĄSKA",
+    "desc": "drobnokruszywowa cementowa zaprawa do spoinowania (1 - 7 mm)",
+    "attributes": [
+      "wysoka odporność mechaniczna – nawet na średnie i wysokie obciążenia eksploatacyjne, w tym intensywne użytkowanie powierzchni okładzin, częste mycie, szorowanie i ścieranie",
+      "bardzo niska absorpcja wody, dzięki czemu fuga jest odporna na wnikanie wilgoci i zabrudzeń",
+      "gładka powierzchnia – możliwa do uzyskania dzięki zawartości bardzo drobnego kruszywa"
+    ],
+    "parameters": [
+      "grubość spoiny: 1 - 7 mm",
+      "temperatura stosowania: od +5 °C do + 25 °C",
+      "czas gotowości do pracy: ok. 2 h",
+      "ruch pieszy: po ok. 24 h",
+      "pełne obciążenie po ok. 24 h"
+    ],
+    "image": "atlas_fuga_waska_p_333_20171228_100609"
+  }
 ]

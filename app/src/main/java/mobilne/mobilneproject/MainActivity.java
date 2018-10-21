@@ -15,9 +15,7 @@ public class MainActivity extends AppCompatActivity implements ActivityCallback 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         this.frameLayout = findViewById(R.id.fragment_container);
-
         addListFragment();
     }
 
@@ -31,7 +29,6 @@ public class MainActivity extends AppCompatActivity implements ActivityCallback 
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.setCustomAnimations(R.animator.enter_right, R.animator.exit_left, R.animator.enter_left, R.animator.exit_right);
-
         fragmentTransaction.replace(R.id.fragment_container, fragment);
         fragmentTransaction.addToBackStack("");
         fragmentTransaction.commit();

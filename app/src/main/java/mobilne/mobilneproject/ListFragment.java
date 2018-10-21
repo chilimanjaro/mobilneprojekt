@@ -86,7 +86,8 @@ public class ListFragment extends Fragment {
                         jsonObject.getString("name"),
                         jsonObject.getString("desc"),
                         attributesList,
-                        parametersList
+                        parametersList,
+                        jsonObject.getString("image")
                 ));
             }
         } catch (JSONException e) {
@@ -142,12 +143,12 @@ public class ListFragment extends Fragment {
             //Bind, gdy juz jest stworzony
             @Override
             public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, final int position) {
-                ((ItemViewHolder) holder).configure(position, new View.OnClickListener() {
+                ((ItemViewHolder) holder).configure(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         startDetailsFragment(position);
                     }
-                }, itemsList.get(position).getName(), itemsList.get(position).getDesc());
+                }, itemsList.get(position).getName(), itemsList.get(position).getDesc(), holder.itemView.getResources().getIdentifier(itemsList.get(position).getImage(), "drawable", getActivity().getPackageName()));
             }
 
             @Override
@@ -156,7 +157,7 @@ public class ListFragment extends Fragment {
             }
 
             private void startDetailsFragment(int position) {
-                activityCallback.showFragment(DetailsFragment.newInstance(position));
+                activityCallback.showFragment(DetailsFragment.newInstance(itemsList.get(position)));
             }
         });
     }

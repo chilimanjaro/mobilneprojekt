@@ -1,20 +1,23 @@
 package mobilne.mobilneproject;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Item {
+public class Item implements Serializable {
     private int type;
     private String name;
     private String desc;
     private ArrayList<String> attributes;
-    private ArrayList<String> parametres;
+    private ArrayList<String> parameters;
+    private String image;
 
-    public Item(int type, String name, String desc, ArrayList<String> attributes, ArrayList<String> parametres) {
+    public Item(int type, String name, String desc, ArrayList<String> attributes, ArrayList<String> parameters, String image) {
         this.type = type;
         this.name = name;
         this.desc = desc;
         this.attributes = attributes;
-        this.parametres = parametres;
+        this.parameters = parameters;
+        this.image = image;
     }
 
     public int getType() {
@@ -49,11 +52,19 @@ public class Item {
         this.attributes = attributes;
     }
 
-    public ArrayList<String> getParametres() {
-        return parametres;
+    public ArrayList<String> getParameters() {
+        return parameters;
     }
 
-    public void setParametres(ArrayList<String> parametres) {
-        this.parametres = parametres;
+    public void setParameters(ArrayList<String> parameters) {
+        this.parameters = parameters;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 }

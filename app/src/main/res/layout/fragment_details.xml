@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -8,6 +9,13 @@
     tools:context=".DetailsFragment">
 
     <!-- TODO: Update blank fragment layout -->
+
+    <ImageView
+        android:id="@+id/item_image"
+        android:layout_width="wrap_content"
+        android:layout_height="170dp"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/atlas_atut_p_1490_20171222_154933" />
 
     <TextView
         android:id="@+id/item_title"
@@ -20,7 +28,7 @@
         android:id="@+id/item_description"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="15dp"
         android:text="TextView" />
 
     <TextView
@@ -36,7 +44,9 @@
         android:id="@+id/item_attributes_list"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp" />
+        android:layout_marginBottom="10dp"
+        android:overScrollMode="never"
+        android:scrollbars="none" />
 
     <TextView
         android:id="@+id/item_parametres_title"
@@ -50,5 +60,9 @@
     <android.support.v7.widget.RecyclerView
         android:id="@+id/item_parametres_list"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:overScrollMode="never"
+        android:scrollbars="none" >
+
+    </android.support.v7.widget.RecyclerView>
 </LinearLayout>

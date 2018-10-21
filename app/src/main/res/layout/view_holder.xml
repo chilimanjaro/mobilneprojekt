@@ -1,18 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
     android:background="?android:attr/selectableItemBackground"
     android:paddingLeft="20dp"
     android:paddingTop="15dp"
     android:paddingRight="20dp"
     android:paddingBottom="15dp">
 
+    <ImageView
+        android:id="@+id/item_image_list"
+        android:layout_width="35dp"
+        android:layout_height="41dp"
+        android:layout_marginRight="10dp"
+        android:scaleType="centerInside"
+        app:srcCompat="@drawable/atlas_atut_p_1490_20171222_154933" />
+
     <TextView
         android:id="@+id/view_holder_item_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/item_image_list"
         android:text="Tytuł przedmiotu"
         android:textAppearance="@android:style/TextAppearance.Material.Subhead" />
 
@@ -21,7 +32,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/view_holder_item_title"
-        android:layout_centerHorizontal="false"
+        android:layout_toRightOf="@+id/item_image_list"
         android:text="Opis przedmiotu" />
 
 </RelativeLayout>
