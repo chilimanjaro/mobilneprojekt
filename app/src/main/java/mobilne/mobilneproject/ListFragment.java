@@ -1,9 +1,11 @@
 package mobilne.mobilneproject;
 
 
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -11,6 +13,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 
@@ -22,6 +25,7 @@ public class ListFragment extends Fragment {
     private RecyclerView recyclerView;
     private ActivityCallback activityCallback;
     private ArrayList<Item> itemsList;
+    private FloatingActionButton addButton;
 
     public ListFragment() {
         // Required empty public constructor
@@ -76,8 +80,12 @@ public class ListFragment extends Fragment {
                 };
                 String name = itemsList.get(position).getName();
                 String desc = itemsList.get(position).getDesc();
-                int img = holder.itemView.getResources().getIdentifier(itemsList.get(position).getImage(), "drawable", getActivity().getPackageName());
-                ((ItemViewHolder) holder).configure(ocl, name, desc, img);
+                Uri img = itemsList.get(position).getImage();
+                try {
+                    ((ItemViewHolder) holder).configure(getActivity(), ocl, name, desc, img);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
             }
 
             @Override

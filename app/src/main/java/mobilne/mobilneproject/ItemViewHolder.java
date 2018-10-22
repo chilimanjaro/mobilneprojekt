@@ -1,14 +1,16 @@
 package mobilne.mobilneproject;
 
+import android.app.Activity;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
+import android.net.Uri;
+import android.provider.MediaStore;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import java.io.InputStream;
+import java.io.IOException;
 
 public class ItemViewHolder extends RecyclerView.ViewHolder {
 
@@ -23,9 +25,8 @@ public class ItemViewHolder extends RecyclerView.ViewHolder {
         this.itemDesc = itemView.findViewById(R.id.view_holder_item_desc);
     }
 
-    public void configure(View.OnClickListener clickListener, String name, String desc, int resourceImage) {
-        InputStream is = itemView.getResources().openRawResource(resourceImage);
-        Bitmap imageBitmap = BitmapFactory.decodeStream(is);
+    public void configure(Activity activity, View.OnClickListener clickListener, String name, String desc, Uri image) throws IOException {
+        Bitmap imageBitmap = MediaStore.Images.Media.getBitmap(activity.getContentResolver(), image);
         this.imageView.setImageBitmap(imageBitmap);
         this.itemTitle.setText(name);
         this.itemDesc.setText(desc);

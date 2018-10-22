@@ -1,5 +1,7 @@
 package mobilne.mobilneproject;
 
+import android.net.Uri;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 
@@ -9,9 +11,9 @@ public class Item implements Serializable {
     private String desc;
     private ArrayList<String> attributes;
     private ArrayList<String> parameters;
-    private String image;
+    private Uri image;
 
-    public Item(int type, String name, String desc, ArrayList<String> attributes, ArrayList<String> parameters, String image) {
+    public Item(int type, String name, String desc, ArrayList<String> attributes, ArrayList<String> parameters, Uri image) {
         this.type = type;
         this.name = name;
         this.desc = desc;
@@ -60,11 +62,11 @@ public class Item implements Serializable {
         this.parameters = parameters;
     }
 
-    public String getImage() {
+    public Uri getImage() {
         return image;
     }
 
-    public void setImage(String image) {
+    public void setImage(Uri image) {
         this.image = image;
     }
 }

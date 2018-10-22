@@ -1,10 +1,16 @@
 package mobilne.mobilneproject;
 
+import android.app.Activity;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.widget.FrameLayout;
 
 import com.nispok.snackbar.Snackbar;
@@ -26,6 +32,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity implements ActivityCallback, DeleteItemCallback {
 
+    private final int STATIC_RESPONSE = 55;
     private FrameLayout frameLayout;
     private String jsonString;
     private ArrayList<Item> itemsList;
@@ -74,13 +81,14 @@ public class MainActivity extends AppCompatActivity implements ActivityCallback,
                 for (int j = 0; j < parametersArray.length(); j++) {
                     parametersList.add(parametersArray.getString(j));
                 }
+
                 itemsList.add(new Item(
                         jsonObject.getInt("type"),
                         jsonObject.getString("name"),
                         jsonObject.getString("desc"),
                         attributesList,
                         parametersList,
-                        jsonObject.getString("image")
+                        Uri.parse("android.resource://mobilne.mobilneproject/drawable/" + jsonObject.getString("image"))
                 ));
             }
         } catch (JSONException e) {
@@ -126,5 +134,33 @@ public class MainActivity extends AppCompatActivity implements ActivityCallback,
         FragmentManager fm = getSupportFragmentManager();
         fm.popBackStack();
 
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        super.onCreateOptionsMenu(menu);
+        MenuInflater menuInflater = getMenuInflater();
+        menuInflater.inflate(R.menu.add_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        Intent i = new Intent(this, NewItemActivity.class);
+        startActivityForResult(i, STATIC_RESPONSE);
+        return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        switch(requestCode) {
+            case STATIC_RESPONSE: {
+                if (resultCode == Activity.RESULT_OK) {
+                    itemsList.add((Item) data.getExtras().getSerializable("newItem"));
+                }
+                break;
+            }
+        }
     }
 }

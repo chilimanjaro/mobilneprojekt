@@ -2,7 +2,9 @@ package mobilne.mobilneproject;
 
 
 import android.app.Activity;
+import android.graphics.Bitmap;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -14,6 +16,8 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import java.io.IOException;
 
 
 /**
@@ -60,8 +64,13 @@ public class DetailsFragment extends Fragment {
 
         item = (Item) getArguments().getSerializable("item");
 
-        int resourceImage = view.getResources().getIdentifier(item.getImage(), "drawable", getActivity().getPackageName());
-        this.imageView.setImageResource(resourceImage);
+        Bitmap imageBitmap = null;
+        try {
+            imageBitmap = MediaStore.Images.Media.getBitmap(getContext().getContentResolver(), item.getImage());
+            this.imageView.setImageBitmap(imageBitmap);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
         this.itemTitle.setText(item.getName());
         this.itemDesc.setText(item.getDesc());

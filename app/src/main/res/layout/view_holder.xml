@@ -15,7 +15,8 @@
         android:id="@+id/item_image_list"
         android:layout_width="35dp"
         android:layout_height="41dp"
-        android:contentDescription="item image"
+        android:layout_marginBottom="15dp"
+        android:contentDescription="@string/item_image"
         android:scaleType="centerInside"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -28,7 +29,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="3dp"
         android:layout_toEndOf="@+id/item_image_list"
-        android:text="Tytuł przedmiotu"
+        android:text="@string/tytu_przedmiotu"
         android:textAppearance="@android:style/TextAppearance.Material.Subhead"
         app:layout_constraintStart_toEndOf="@+id/item_image_list"
         app:layout_constraintTop_toTopOf="parent" />
@@ -40,7 +41,7 @@
         android:layout_below="@+id/view_holder_item_title"
         android:layout_marginStart="3dp"
         android:layout_toEndOf="@+id/item_image_list"
-        android:text="Opis przedmiotu"
+        android:text="@string/opis_przedmiotu"
         app:layout_constraintStart_toEndOf="@+id/item_image_list"
         app:layout_constraintTop_toBottomOf="@+id/view_holder_item_title" />
 
@@ -51,7 +52,8 @@
         android:layout_marginTop="15dp"
         android:background="?android:attr/listDivider"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view_holder_item_desc"
-        tools:layout_editor_absoluteX="20dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_holder_item_desc" />
 
 </android.support.constraint.ConstraintLayout>
