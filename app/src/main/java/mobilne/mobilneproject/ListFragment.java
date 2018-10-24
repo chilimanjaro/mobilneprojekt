@@ -20,12 +20,13 @@ import java.util.ArrayList;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class ListFragment extends Fragment {
+public class ListFragment extends Fragment implements ListToFragmentCallback {
 
     private RecyclerView recyclerView;
     private ActivityCallback activityCallback;
     private ArrayList<Item> itemsList;
     private FloatingActionButton addButton;
+    private RecyclerView.Adapter listAdapter;
 
     public ListFragment() {
         // Required empty public constructor
@@ -35,13 +36,11 @@ public class ListFragment extends Fragment {
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         activityCallback = (ActivityCallback) getActivity();
-        itemsList = (ArrayList<Item>) getArguments().getSerializable("itemsList");
     }
 
     @Override
     public void onDestroy() {
         super.onDestroy();
-
         activityCallback = null;
     }
 
@@ -62,7 +61,7 @@ public class ListFragment extends Fragment {
 
     private void configRecyclerView() {
         this.recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-        this.recyclerView.setAdapter(new RecyclerView.Adapter() {
+        listAdapter = new RecyclerView.Adapter() {
             @NonNull
 
             @Override
@@ -94,8 +93,19 @@ public class ListFragment extends Fragment {
             }
 
             private void startDetailsFragment(int position) {
-                activityCallback.showFragment(DetailsFragment.newInstance(itemsList.get(position)));
+                activityCallback.showFragment(DetailsFragment.newInstance(itemsList.get(position)), "details");
             }
-        });
+        };
+        this.recyclerView.setAdapter(listAdapter);
+    }
+
+    @Override
+    public void sendData(ArrayList<Item> itemsList) {
+        this.itemsList = itemsList;
+    }
+
+    @Override
+    public void notifyAboutChange() {
+        listAdapter.notifyDataSetChanged();
     }
 }

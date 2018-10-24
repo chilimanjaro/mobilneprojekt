@@ -39,7 +39,7 @@ public class DetailsFragment extends Fragment {
 
     public static DetailsFragment newInstance(Item item) {
         Bundle args = new Bundle();
-        args.putSerializable("item", item);
+        args.putParcelable("item", item);
 
         DetailsFragment fragment = new DetailsFragment();
         fragment.setArguments(args);
@@ -62,9 +62,9 @@ public class DetailsFragment extends Fragment {
         this.parametersList = view.findViewById(R.id.item_parametres_list);
         this.deleteButton = view.findViewById(R.id.delete_button);
 
-        item = (Item) getArguments().getSerializable("item");
+        item = getArguments().getParcelable("item");
 
-        Bitmap imageBitmap = null;
+        Bitmap imageBitmap;
         try {
             imageBitmap = MediaStore.Images.Media.getBitmap(getContext().getContentResolver(), item.getImage());
             this.imageView.setImageBitmap(imageBitmap);

@@ -1,11 +1,12 @@
 package mobilne.mobilneproject;
 
 import android.net.Uri;
+import android.os.Parcel;
+import android.os.Parcelable;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Item implements Serializable {
+public class Item implements Parcelable {
     private int type;
     private String name;
     private String desc;
@@ -21,6 +22,27 @@ public class Item implements Serializable {
         this.parameters = parameters;
         this.image = image;
     }
+
+    protected Item(Parcel in) {
+        type = in.readInt();
+        name = in.readString();
+        desc = in.readString();
+        attributes = in.createStringArrayList();
+        parameters = in.createStringArrayList();
+        image = in.readParcelable(Uri.class.getClassLoader());
+    }
+
+    public static final Creator<Item> CREATOR = new Creator<Item>() {
+        @Override
+        public Item createFromParcel(Parcel in) {
+            return new Item(in);
+        }
+
+        @Override
+        public Item[] newArray(int size) {
+            return new Item[size];
+        }
+    };
 
     public int getType() {
         return type;
@@ -68,5 +90,20 @@ public class Item implements Serializable {
 
     public void setImage(Uri image) {
         this.image = image;
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeInt(type);
+        dest.writeString(name);
+        dest.writeString(desc);
+        dest.writeStringList(attributes);
+        dest.writeStringList(parameters);
+        dest.writeParcelable(image, flags);
     }
 }

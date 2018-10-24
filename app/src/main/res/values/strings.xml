@@ -9,6 +9,18 @@
     <string name="opis_przedmiotu">Opis przedmiotu</string>
     <string name="podstawowe_dane">Podstawowe dane</string>
     <string name="select_type">Wybierz typ</string>
+    <string name="add">Dodaj przedmiot</string>
+    <string name="item_name">Nazwa</string>
+    <string name="item_desc">Opis</string>
+    <string name="item_type">Typ</string>
+    <string name="dodaj_wiersz">Dodaj wiersz</string>
+    <string name="name_hint">np. \"ATLAS KLEJ\"</string>
+    <string name="desc_hint">np. \"najlepszy klej!\"</string>
+    <string name="add_photo_t">Dodaj zdjęcie</string>
+    <string name="new_image_desc">Kliknij na zdjęcie, aby otworzyć galerię.</string>
+    <string name="new_item_image">Zdjęcie do dodania do przedmiotu</string>
+    <string name="new_item_data">Ten dane będą wyświetlone na liście.</string>
+    <string name="new_item_att">Kliknij na poniższy przycisk, aby dodać nowy wiersz.</string>
     <string-array name="item_types">
         <item>Klej</item>
         <item>Fuga</item>

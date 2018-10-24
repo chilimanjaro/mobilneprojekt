@@ -25,23 +25,26 @@
 
     <TextView
         android:id="@+id/view_holder_item_title"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="3dp"
+        android:layout_marginStart="10dp"
         android:layout_toEndOf="@+id/item_image_list"
         android:text="@string/tytu_przedmiotu"
         android:textAppearance="@android:style/TextAppearance.Material.Subhead"
+        app:layout_constraintBottom_toTopOf="@+id/view_holder_item_desc"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/item_image_list"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/view_holder_item_desc"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/view_holder_item_title"
-        android:layout_marginStart="3dp"
+        android:layout_marginStart="10dp"
         android:layout_toEndOf="@+id/item_image_list"
         android:text="@string/opis_przedmiotu"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/item_image_list"
         app:layout_constraintTop_toBottomOf="@+id/view_holder_item_title" />
 

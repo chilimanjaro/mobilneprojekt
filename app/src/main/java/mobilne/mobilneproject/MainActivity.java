@@ -36,6 +36,8 @@ public class MainActivity extends AppCompatActivity implements ActivityCallback,
     private FrameLayout frameLayout;
     private String jsonString;
     private ArrayList<Item> itemsList;
+    private ListFragment listFragment;
+    private ListToFragmentCallback listToFragmentCallback;
 
     private void loadJSONFile() {
         InputStream is = getResources().openRawResource(R.raw.data);
@@ -107,20 +109,19 @@ public class MainActivity extends AppCompatActivity implements ActivityCallback,
     }
 
     private void addListFragment() {
-        ListFragment fragment = new ListFragment();
-        Bundle bundle = new Bundle();
-        bundle.putSerializable("itemsList", itemsList);
-        fragment.setArguments(bundle);
-        showFragment(fragment);
+        listFragment = new ListFragment();
+        this.listToFragmentCallback = listFragment;
+        listToFragmentCallback.sendData(itemsList);
+        showFragment(listFragment, "list");
     }
 
     @Override
-    public void showFragment(Fragment fragment) {
+    public void showFragment(Fragment fragment, String tag) {
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.setCustomAnimations(R.animator.enter_right, R.animator.exit_left, R.animator.enter_left, R.animator.exit_right);
-        fragmentTransaction.replace(R.id.fragment_container, fragment);
-        if(!(fragment instanceof ListFragment))
+        fragmentTransaction.replace(R.id.fragment_container, fragment, tag);
+        if (!(fragment instanceof ListFragment))
             fragmentTransaction.addToBackStack("");
         fragmentTransaction.commit();
     }
@@ -129,8 +130,9 @@ public class MainActivity extends AppCompatActivity implements ActivityCallback,
     public void deleteItem(Item item) {
         SnackbarManager.show(
                 Snackbar.with(getApplicationContext())
-                        .text("Usunięto: " + item.getName()).duration(1000), this);
+                        .text("Usunięto: " + item.getName()).duration(2000), this);
         itemsList.remove(item);
+        listToFragmentCallback.notifyAboutChange();
         FragmentManager fm = getSupportFragmentManager();
         fm.popBackStack();
 
@@ -154,10 +156,15 @@ public class MainActivity extends AppCompatActivity implements ActivityCallback,
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        switch(requestCode) {
+        switch (requestCode) {
             case STATIC_RESPONSE: {
                 if (resultCode == Activity.RESULT_OK) {
-                    itemsList.add((Item) data.getExtras().getSerializable("newItem"));
+                    Item item = data.getParcelableExtra("newItem");
+                    SnackbarManager.show(
+                            Snackbar.with(getApplicationContext())
+                                    .text("Dodano: " + item.getName()).duration(2000), this);
+                    itemsList.add(item);
+                    listToFragmentCallback.notifyAboutChange();
                 }
                 break;
             }
